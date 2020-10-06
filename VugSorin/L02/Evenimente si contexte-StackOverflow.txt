@@ -1,1 +1,21 @@
+Principalele contexte care se regasesc in cadrul forumului StackOverflow sunt:
+	- Contexul privind autentificarea;
+	- contextul privind interactiunea intre doi sau mai multi utilizatori,corespunzatoare unui anumit topic;
+	- contexul privind prezentarea si lansarea pe piata a anumitor joburi,in diferite departamente aferente domeniului IT&C;
 
+Principalele evenimente care se regasesc in cadrul forumului StackOverflow sunt:
+	- contextul de login		
+		- introducerea credentialelor corespunzatoare pentru derularea procesului de autentificare,intr-o maniera optima;
+ 	- contextul referitor la dezbaterea pe un anumit topic:
+		-evenimente asignate unui posibile entitati care initiaza discutia:
+			-adaugarea unei intrebari;
+			-cautarea unei solutii existente si relativa la problema curenta;
+			-modificarea unei anumite intrebari pentru un nivel de transparenta si claritate ridicat;
+			-votarea unei intrebari,ca fiind un rapsuns corect si pliabil ,in contextul dat;
+		-evenimente asignate unui posibil individ care da curs intrebarii:
+			-oferirea unui raspuns pe baza intrebarii curente;
+			-revizuirea unei solutii partial corecta, in vederea imbunatatirii acesteia;
+	- contextul privind piata muncii:
+		- posibilitatea adaugarii unui anumit post disponibil, in cadrul unei companii sau intreprinderi;
+		- posibilitatea vizualizarii si accesarii unui anumit post,dupa preferinte si disponibilitate;
+		
