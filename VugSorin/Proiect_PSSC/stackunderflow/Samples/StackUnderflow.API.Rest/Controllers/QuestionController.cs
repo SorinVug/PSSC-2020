@@ -38,7 +38,7 @@ namespace StackUnderflow.API.AspNetCore.Controllers
             var dependencies = new QuestionDependencies();
             dependencies.SendConfirmationEmail = SendEmail;
 
-            var expr = from questionResult in QuestionDomain.CreateQuestion(cmd.QuestionId, cmd.QuestionText,cmd.Title, cmd.Tags)
+            var expr = from questionResult in QuestionDomain.CreateQuestion(cmd.QuestionId, cmd.QuestionText,cmd.Title,cmd.TenantId, cmd.UserId, cmd.Tags)
                        select questionResult;
 
             var result = await _interpreter.Interpret(expr, ctx, dependencies);

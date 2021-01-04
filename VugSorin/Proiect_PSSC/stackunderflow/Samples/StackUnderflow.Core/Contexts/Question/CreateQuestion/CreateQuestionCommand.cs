@@ -13,12 +13,17 @@ namespace StackUnderflow.Domain.Core.Contexts.Question.CreateQuestion
         [Required]
         public string Title { get;  set; }
         [Required]
+        public int TenantId { get; set; }
+        [Required]
+        public Guid UserId { get; set; }
         public string Tags { get;  set; }
-        public CreateQuestionCommand(int questionId, string questionText,string title, string tags)
+        public CreateQuestionCommand(int questionId, string questionText,string title, int tenant, Guid user, string tags)
         {
             QuestionId = questionId;
             QuestionText = questionText;
             Title = title;
+            TenantId = tenant;
+            UserId = user;
             Tags = tags;
         }
     }

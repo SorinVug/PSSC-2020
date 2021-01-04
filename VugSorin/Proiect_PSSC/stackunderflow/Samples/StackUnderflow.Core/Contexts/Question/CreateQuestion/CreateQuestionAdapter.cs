@@ -13,7 +13,6 @@ namespace StackUnderflow.Domain.Core.Contexts.Question.CreateQuestion
     public partial class CreateQuestionAdapter : Adapter<CreateQuestionCommand, ICreateQuestionResult, QuestionWriteContext, QuestionDependencies>
     {
         private readonly IExecutionContext ex_;
-        private Guid guid = new Guid("2f4827e5-abb8-45e5-bc94-ed67e745d9fb");
         public CreateQuestionAdapter(IExecutionContext ex)
         {
             ex_ = ex;
@@ -51,21 +50,20 @@ namespace StackUnderflow.Domain.Core.Contexts.Question.CreateQuestion
                 Title = cmd.Title,
                 PostText = cmd.QuestionText,
                 PostTypeId = 1,
-                PostedBy = guid,
-                TenantId = 7
+                PostedBy = cmd.UserId,
+                TenantId = cmd.TenantId
             };
-            question.PostView.Add(new PostView()
-            {
-                TenantId = 7,
-                UserId = guid,
-                //PostId = cmd.QuestionId
-
-            });
-            question.PostTag.Add(new PostTag()
-            {
-                TenantId = 7,
-                QuestionId = cmd.QuestionId
-            });
+            //question.PostView.Add(new PostView()
+            //{
+            //    TenantId = cmd.TenantId,
+            //    UserId = cmd.UserId,
+            //    PostId = cmd.QuestionId
+            //});
+            //question.PostTag.Add(new PostTag()
+            //{
+            //    TenantId = cmd.TenantId,
+            //    QuestionId = cmd.QuestionId
+            //});
             return question;
         }
 
